@@ -42,25 +42,27 @@ const SingleTour = () => {
     <div
       style={{
         margin: "80px",
+        marginTop:'700px'
+        
        
       }}
     >
-      <MDBContainer  >
+      <MDBContainer    >
         
-        <MDBCard className="mb-3 mt-3"    >
+        <MDBCard className="mb-3 mt-3"   style={{backgroundColor:'transparent', borderRadius:"20px"}}  >
 
 
-          <MDBCardImage 
+          <MDBCardImage   
             position="top"
-            style={{ width: "100%", maxHeight: "600px" }}
+            style={{ width: "100%", maxHeight: "600px", paddingTop:'30px'}}
             src={tour.imageFile}
             alt={tour.title}
           />
-          <MDBCardBody>
+          <MDBCardBody   style={{backgroundColor:'#FFD580',borderEndEndRadius:"20px", borderEndStartRadius:'20px'}}>
             <MDBBtn
               tag="a"
               color="none"
-              style={{ float: "left", color: "#000" }}
+              style={{ float: "left", color: "#000" , backgroundColor:'lightblue' }}
               onClick={() => navigate("/")}
             >
               <MDBIcon
@@ -70,12 +72,12 @@ const SingleTour = () => {
                 style={{ float: "left" }}
               />
             </MDBBtn>
-            <h3>{tour.title}</h3>
+            <h3 style={{color:'Green'}}>{tour.title}</h3>
             <span>
-              <p className="text-start tourName">Created By: {tour.name}</p>
+              <p className="text-start tourName" style={{color: "Black"}}>Created By: {tour.name}</p>
             </span>
-            <div style={{ float: "left" }}>
-              <span className="text-start">
+            <div style={{ float: "left", color:'blue' }}>
+              <span className="text-start" >
                 {tour && tour.tags && tour.tags.map((item) => `#${item} `)}
               </span>
             </div>
@@ -91,14 +93,15 @@ const SingleTour = () => {
                 {moment(tour.createdAt).fromNow()}
               </small>
             </MDBCardText>
-            <MDBCardText className="lead mb-0 text-start">
+            <MDBCardText className="lead mb-0 text-start" style={{color:'purple'}}>
               {tour.description}
             </MDBCardText>
           </MDBCardBody>
           <RelatedTours relatedTours={relatedTours} tourId={id} />
         </MDBCard>
-       
-        <DisqusThread id={id} title={tour.title} path={`/tour/${id}`} />
+      
+        <DisqusThread style={{marginTop:'100px'}}  id={id} title={tour.title} path={`/tour/${id}`} />
+        
          </MDBContainer>
          </div>
     </>
