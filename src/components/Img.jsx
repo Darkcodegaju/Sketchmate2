@@ -51,7 +51,7 @@ const Img = () => {
 
   const handleDownload = async () => {
     try {
-      const response = await fetch(`http://localhost:3001/download-image?url=${encodeURIComponent(imageUrl)}`, {
+      const response = await fetch(`https://sketchmatey.onrender.com/download-image?url=${encodeURIComponent(imageUrl)}`, {
         method: 'GET',
         mode: 'cors',
       });
