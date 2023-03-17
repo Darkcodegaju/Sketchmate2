@@ -42,7 +42,7 @@ const AddEditTour = () => {
  }
  const handlebeautify=()=>
  {
-  window.location.href = 'https://sketchmate2.vercel.app/sketchwithai';
+  window.location.href = 'https://sketch2mate.vercel.app/sketchwithai';
  }
 
 
